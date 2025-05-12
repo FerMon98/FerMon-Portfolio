@@ -1,0 +1,57 @@
+
+@keyframes borderAnimation {
+    0% { border-color: red; }
+    50% { border-color: blue; }
+    100% { border-color: green; }
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;  
+    color: white;
+    background-color: black;
+    font-size: 1.5rem;
+}
+
+header, main {
+    margin: 2rem;
+    text-align: center;
+}
+
+header {
+
+    nav {
+        line-height: 3rem;
+        display: none;
+
+        ul {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-around;
+
+            li {
+                list-style: none;
+            }
+
+            li:hover {
+                text-decoration: underline;
+                cursor: pointer;
+                color: darkcyan;
+                
+            }
+        }
+    }
+}
+
+main {
+
+    .border-animated {
+        border: 5px solid;
+        animation: borderAnimation 3s infinite alternate;
+        padding: 5rem 2rem;
+    }
+}
+
+
+
