@@ -56,9 +56,11 @@ header {
 }
 
 main {
-
+    width: 80%;
+    margin: 5rem auto;
+    padding: 2rem;
     .border-animated {
-        border: 5px solid;
+        border: 10px solid;
         animation: borderAnimation 3s infinite alternate;
         padding: 5rem 2rem;
     }
