@@ -78,6 +78,12 @@ header {
     }
 }
 
+main {
+    background-image: url(/Resources/images/logo.png);
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+}
 
 
 
