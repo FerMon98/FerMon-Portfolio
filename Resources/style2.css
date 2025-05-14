@@ -1,28 +1,18 @@
 @import url('https://fonts.googleapis.com/css2?family=Delius&family=Montserrat+Alternates:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
-@keyframes gradientBG {
-  0% {
-    background-position: 0% 50%;
-  }
-  50% {
-    background-position: 100% 50%;
-  }
-  100% {
-    background-position: 0% 50%;
-  }
+@keyframes borderAnimation {
+    0% { border-color: red; }
+    50% { border-color: blue; }
+    100% { border-color: green; }
 }
 
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;  
-    font-size: 1.5rem;
-}
-
-body {
     color: white;
     background-color: black;
-    
+    font-size: 1.5rem;
 }
 
 header, main {
@@ -41,34 +31,21 @@ header, main {
 
 header {
 
-    margin: 5rem auto;
-
-    h1 {
-        font-size: 3rem;
-    }
-
     nav {
         line-height: 3rem;
-        border-radius: 30px;
-        margin: 2rem 3rem;
-        background: linear-gradient(-45deg, #708090, #4682B4, #556B2F, #8FBC8F);
-        background-size: 400% 400%;
-        animation: gradientBG 15s ease infinite;
-
+        display: none;
 
         ul {
             display: flex;
             flex-direction: row;
             justify-content: space-around;
 
-
             li, a {
                 list-style: none;
                 text-decoration: none;
-                color: black;
             }
 
-            a:hover {
+            li:hover {
                 text-decoration: underline;
                 cursor: pointer;
                 color: darkcyan;
@@ -78,6 +55,11 @@ header {
     }
 }
 
+main {
 
-
-
+    .border-animated {
+        border: 5px solid;
+        animation: borderAnimation 3s infinite alternate;
+        padding: 5rem 2rem;
+    }
+}
