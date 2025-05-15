@@ -15,53 +15,31 @@
     font-size: 1.5rem;
 }
 
-header, main {
-    margin: 2rem;
+main, .border-animated {
+    width: 80%;
+    margin: 5rem auto;
+    padding: 5rem 2rem;
+    border: 10px solid;
+    animation: borderAnimation 3s infinite alternate;
+    line-height: 5rem;
     text-align: center;
+    font-family: 'Montserrat Alternates', sans-serif;
 
     h1, h2, h3, h4, h5, h6 {
         font-family: 'Delius', cursive;
         font-size: 2rem;
     }
 
-    p {
-        font-family: 'Montserrat Alternates', sans-serif;
+    h1 {
+        font-size: 3rem;
+        line-height: 10rem;
     }
-}
 
-header {
-
-    nav {
-        line-height: 3rem;
-        display: none;
-
-        ul {
-            display: flex;
-            flex-direction: row;
-            justify-content: space-around;
-
-            li, a {
-                list-style: none;
-                text-decoration: none;
-            }
-
-            li:hover {
-                text-decoration: underline;
-                cursor: pointer;
-                color: darkcyan;
-                
-            }
-        }
-    }
-}
-
-main {
-    width: 80%;
-    margin: 5rem auto;
-    padding: 2rem;
-    .border-animated {
-        border: 10px solid;
-        animation: borderAnimation 3s infinite alternate;
-        padding: 5rem 2rem;
+    #demo {
+        background-color: rgba(255, 255, 255, 0.8);
+        border-radius: 25px;
+        color: black;
+        width: 30%;
+        margin: 0 auto;
     }
 }
