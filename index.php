@@ -62,10 +62,11 @@
             // Build the file path
             if ($activePage === 'home') {
                 $filePath = __DIR__ . '/pages/home.php';
-            } else {
+            } else if ($activePage && isset($navPages[$activePage])) {
                 $filePath = __DIR__ . '/' . $navPages[$activePage]['file'] ?? null;
+            } else {
+                $filePath = __DIR__ . '/pages/404.php'; // No valid page
             }
-
             // Include if valid and exists
             if ($filePath && file_exists($filePath)) {
                 include $filePath;
