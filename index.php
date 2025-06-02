@@ -8,9 +8,9 @@
     ];
 
     // 2. Safely get REQUEST_URI (fallback to '/')
-    $requestUri = $_SERVER['REQUEST_URI'] ?? '/';       // :contentReference[oaicite:8]{index=8}
+    $requestUri = $_SERVER['REQUEST_URI'] ?? '/';       
 
-    $path = trim(parse_url($requestUri, PHP_URL_PATH), '/');  // :contentReference[oaicite:9]{index=9}
+    $path = trim(parse_url($requestUri, PHP_URL_PATH), '/'); 
 
     // 3. Determine active page
     if ($path === '' || $path === 'index.php') {
